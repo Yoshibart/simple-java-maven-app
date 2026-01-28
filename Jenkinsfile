@@ -14,5 +14,10 @@ pipeline{
         sh 'mvn clean test package'
       }
     }
+    post {
+      always {
+        junit 'target/surefire-reports/*.xml'
+      }
+    }
   }
 }
