@@ -13,6 +13,9 @@ pipeline{
       steps{
         sh 'mvn clean test package'
       }
+      steps{
+        sh 'mvn clean verify test package'
+      }
     }
   }
     post {
