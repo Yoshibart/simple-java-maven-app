@@ -14,7 +14,7 @@ pipeline{
         sh 'mvn clean test package'
       }
       steps{
-        sh 'mvn clean verify test package'
+        sh 'mvn clean verify'
       }
     }
   }
