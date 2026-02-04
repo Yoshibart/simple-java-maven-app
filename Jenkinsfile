@@ -16,9 +16,6 @@ pipeline{
     }
   }
     post {
-      always {
-        junit 'target/surefire-reports/*.xml'
-      }
       always{
         publishHTML(target: [
           reportDir: 'target/site/jacoco',
